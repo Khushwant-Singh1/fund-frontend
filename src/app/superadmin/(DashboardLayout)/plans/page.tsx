@@ -4,19 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { usePlansDeletePlanMutation, usePlansGetPlansQuery } from "@/lib/store";
 import { useUpdateActiveStatusMutation } from "@/lib/plansApi";
-
-export const features = [
-  "Leads",
-  "Loans",
-  "Govt-Loans",
-  "Insurance",
-  "QuickLoans",
-  "Capaign-Marketing",
-  "Taxation",
-  "emiCalculator",
-  "TrainingAndSupport",
-  "FeedbackAndGrievance",
-];
+import { features } from "@/constants/features";
 
 const PlansPage = () => {
   const router = useRouter();
@@ -145,12 +133,12 @@ const PlansPage = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {plans
-          .filter((plan) => {
+          .filter((plan: any) => {
             if (activeTab === "Active") return plan.isActive;
             if (activeTab === "Inactive") return !plan.isActive;
             return true;
           })
-          .map((plan) => (
+          .map((plan: any) => (
             <div
               key={plan.id}
               className={`flex flex-col bg-white rounded-[16px] p-6 border-3 border-black transition-all duration-300 ease-in-out ${

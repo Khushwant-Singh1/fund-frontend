@@ -41,7 +41,6 @@ export default function SuperAdminApplications() {
     refetch,
   } = useGetApplicationsQuery(undefined, {
     skip: !token,
-    extra: { token },
   });
   const [updateStatus, { isLoading: isUpdating }] = useUpdateApplicationStatusMutation();
 
@@ -53,7 +52,7 @@ export default function SuperAdminApplications() {
   const handleUpdateStatus = async (id: string, newStatus: "approved" | "rejected", data: any) => {
     if (!token) return;
     try {
-      await updateStatus({ id, status: newStatus }, { extra: { token } }).unwrap();
+      await updateStatus({ id, status: newStatus }).unwrap();
       showNotification(
         newStatus === "approved"
           ? "User application approved successfully!"

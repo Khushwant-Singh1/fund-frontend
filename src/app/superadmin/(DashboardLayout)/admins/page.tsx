@@ -47,7 +47,6 @@ export default function ManageAdmins() {
     refetch,
   } = useGetAdminsQuery(undefined, {
     skip: !token,
-    extra: { token },
   });
   const [createAdmin, { isLoading: isCreating }] = useCreateAdminMutation();
   const [deleteAdmin, { isLoading: isDeleting }] = useDeleteAdminMutation();
@@ -60,7 +59,7 @@ export default function ManageAdmins() {
     e.preventDefault();
     if (!token) return;
     try {
-      await createAdmin({ ...form, role: "DSA", type: "adminCreation" }, { extra: { token } }).unwrap();
+      await createAdmin({ ...form, role: "DSA", type: "adminCreation" }).unwrap();
       setSnackbar({ open: true, message: "Admin created successfully!", severity: "success" });
       setForm({ name: "", email: "", password: "" });
       refetch();
@@ -72,7 +71,7 @@ export default function ManageAdmins() {
   const handleDelete = async (id: string) => {
     if (!token) return;
     try {
-      await deleteAdmin(id, { extra: { token } }).unwrap();
+      await deleteAdmin(id).unwrap();
       setSnackbar({ open: true, message: "Admin deleted", severity: "success" });
       refetch();
     } catch (error) {

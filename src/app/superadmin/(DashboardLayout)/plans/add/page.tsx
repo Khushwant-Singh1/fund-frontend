@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { planSchema, PlanFormData } from "@/lib/validation/planSchema";
-import { features } from "../page";
+import { features } from "@/constants/features";
 import { usePlansCreatePlanMutation } from "@/lib/store";
 
 const AddPlanPage = () => {

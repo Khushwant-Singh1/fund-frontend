@@ -3,16 +3,15 @@
 import { useState, useEffect } from "react";
 import ApplicationCard from "@/components/ApplicationCard";
 
-// TypeScript interface for application data
+// TypeScript interface for application data (matches ApplicationCard expectations)
 interface Application {
   id: string;
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   phone: string;
   organization: string;
   purpose: string;
-  description: string;
+  message: string;
   status: "pending" | "approved" | "rejected";
   createdAt: string;
   rejectionReason?: string;
@@ -46,37 +45,34 @@ export default function SuperAdminApplications() {
         const mockApplications: Application[] = [
           {
             id: "app-1",
-            firstName: "John",
-            lastName: "Doe",
+            name: "John Doe",
             email: "john.doe@example.com",
             phone: "555-123-4567",
             organization: "Doe Foundation",
             purpose: "nonprofit",
-            description: "Looking to raise funds for our community outreach program.",
+            message: "Looking to raise funds for our community outreach program.",
             status: "pending",
             createdAt: "2025-06-25T10:30:00Z",
           },
           {
             id: "app-2",
-            firstName: "Jane",
-            lastName: "Smith",
+            name: "Jane Smith",
             email: "jane.smith@example.com",
             phone: "555-987-6543",
             organization: "Smith Enterprises",
             purpose: "business",
-            description: "Need funding for our startup expansion.",
+            message: "Need funding for our startup expansion.",
             status: "pending",
             createdAt: "2025-06-26T14:45:00Z",
           },
           {
             id: "app-3",
-            firstName: "Michael",
-            lastName: "Johnson",
+            name: "Michael Johnson",
             email: "michael.j@example.com",
             phone: "555-456-7890",
             organization: "Johnson College",
             purpose: "education",
-            description: "Fundraising for scholarship programs.",
+            message: "Fundraising for scholarship programs.",
             status: "approved",
             createdAt: "2025-06-20T09:15:00Z",
             credentials: {
@@ -86,13 +82,12 @@ export default function SuperAdminApplications() {
           },
           {
             id: "app-4",
-            firstName: "Emily",
-            lastName: "Williams",
+            name: "Emily Williams",
             email: "emily.w@example.com",
             phone: "555-789-1234",
             organization: "",
             purpose: "personal",
-            description: "Medical expenses fundraising.",
+            message: "Medical expenses fundraising.",
             status: "rejected",
             createdAt: "2025-06-18T16:20:00Z",
             rejectionReason: "Insufficient information provided about fundraising purpose. Please reapply with more details about your medical expenses and fundraising goal."
