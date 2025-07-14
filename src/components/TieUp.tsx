@@ -7,7 +7,6 @@ import shri from "../../public/assets/shriram.png";
 import chola from "../../public/assets/chola.png";
 import ujjivan from "../../public/assets/ujjivan.png";
 import jana from "../../public/assets/jana.jpg";
-import captial from "../../public/assets/Capital_Small_Finance_Logo.png"; // Note: This was imported but not used in the original.
 import equitas from "../../public/assets/Equitas-logo.png";
 import baja from "../../public/assets/bajaj.png";
 import au from "../../public/assets/aubank.png";
@@ -51,7 +50,7 @@ export default function Tieup() {
           Our <span className="text-yellow-500">NBFC</span> Tieup (110+)
         </h2>
         <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-          We're proud to collaborate with leading organizations and government
+          We&apos;re proud to collaborate with leading organizations and government
           bodies who support our mission. Their trust and partnership help us
           deliver reliable and impactful services to our users.
         </p>

@@ -50,7 +50,7 @@ export default function Page() {
 						<TabsLabel>
 							Life Insurance
 							<TabsDescription>
-								Ensure your family's financial safety with life coverage plans.
+								Ensure your family&apos;s financial safety with life coverage plans.
 							</TabsDescription>
 						</TabsLabel>
 					</TabsTrigger>
@@ -106,23 +106,23 @@ export default function Page() {
 								{leads.map((lead, index) => (
 									<TableRow
 										key={index}
-										row={[
-											lead.fileNo,
-											lead.loan,
-											lead.mode,
-											lead.applicant,
-											lead.subscriber,
-											<EmailCell email={lead.email} />,
-											lead.phone,
-											lead.review,
-											<StatusBadge
-												status={
-													lead.status.toLowerCase() as
-														| "approved"
-														| "pending"
-														| "rejected"
-												}
-											/>,
+										row={[										lead.fileNo,
+										lead.loan,
+										lead.mode,
+										lead.applicant,
+										lead.subscriber,
+										<EmailCell key={`email-${index}`} email={lead.email} />,
+										lead.phone,
+										lead.review,
+										<StatusBadge
+											key={`status-${index}`}
+											status={
+												lead.status.toLowerCase() as
+													| "approved"
+													| "pending"
+													| "rejected"
+											}
+										/>,
 										]}
 									/>
 								))}

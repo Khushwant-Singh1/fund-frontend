@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { formatDistanceToNow } from "date-fns";
 
 interface Application {
@@ -23,7 +23,7 @@ interface ApplicationCardProps {
   onUpdateStatus: (
     id: string,
     status: "approved" | "rejected",
-    data: any
+    data: unknown
   ) => void;
 }
 

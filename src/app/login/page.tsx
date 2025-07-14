@@ -14,7 +14,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [checked, setChecked] = useState(false);
   const [error, setError] = useState("");
-  const { data: session, status } = useSession();
+  const { status } = useSession();
   const router = useRouter();
 
   useEffect(() => {
@@ -132,7 +132,7 @@ export default function LoginPage() {
             </div>
 
             <div className="text-center text-sm text-black">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Link href="#" className="font-semibold">
                 sign up
               </Link>

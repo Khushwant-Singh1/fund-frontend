@@ -13,7 +13,6 @@ const EmiCalculator = () => {
 		(loanAmount * monthlyRate * Math.pow(1 + monthlyRate, tenure)) /
 		(Math.pow(1 + monthlyRate, tenure) - 1);
 	const totalPayment = emi * tenure;
-	const totalInterest = totalPayment - loanAmount;
 
 	return (
 		<div className="mb-6">

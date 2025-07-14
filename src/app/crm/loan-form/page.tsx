@@ -342,11 +342,11 @@ export default function Component() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="fatherSpouseName" className="text-[#2d2c2c] font-medium">
-                  Father's / Spouse's Name *
+                  Father&apos;s / Spouse&apos;s Name *
                 </Label>
                 <Input
                   id="fatherSpouseName"
-                  placeholder="Enter father's or spouse's name"
+                  placeholder="Enter father&apos;s or spouse&apos;s name"
                   value={formData.fatherSpouseName}
                   onChange={(e) => updateFormData("fatherSpouseName", e.target.value)}
                   className="bg-[#eff0f6] border-0 h-12 placeholder:text-[#999999]"

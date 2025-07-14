@@ -43,7 +43,7 @@ export default function TrustedPartners() {
 
         {/* Description */}
         <p className="text-gray-500 text-lg max-w-3xl mx-auto mb-16 leading-relaxed">
-          We're proud to collaborate with leading organizations and government
+          We&apos;re proud to collaborate with leading organizations and government
           bodies who support our mission. Their trust and partnership help us
           deliver reliable and impactful services to our users.
         </p>

@@ -185,7 +185,7 @@ export default function Footer() {
               </div>
 
               <p className="text-[#141212] text-sm mb-2 leading-relaxed">
-                Transparent. Trusted. Impactful. Let's Build A Better Future.
+                Transparent. Trusted. Impactful. Let&apos;s Build A Better Future.
               </p>
 
               <Button className="bg-[#f7c430] text-black font-medium px-6 py-2 rounded-md duration-200 shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] transition-shadow">

@@ -121,18 +121,18 @@ export default function Page() {
 										row={[
 											lead.fileNo,
 											lead.loan,
-											lead.mode,
-											lead.applicant,
-											lead.subscriber,
-											<EmailCell email={lead.email} />,
-											lead.phone,
-											lead.review,
-											<StatusBadge
-												status={
-													lead.status.toLowerCase() as
-														| "approved"
-														| "pending"
-														| "rejected"
+											lead.mode,										lead.applicant,
+										lead.subscriber,
+										<EmailCell key={`email-${index}`} email={lead.email} />,
+										lead.phone,
+										lead.review,
+										<StatusBadge
+											key={`status-${index}`}
+											status={
+												lead.status.toLowerCase() as
+													| "approved"
+													| "pending"
+													| "rejected"
 												}
 											/>,
 										]}
